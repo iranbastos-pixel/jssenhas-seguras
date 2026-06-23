@@ -17,23 +17,41 @@
         </div>
         <div class="conteudo-senha">
             <label for="senha">Senha</label>
-            <input name="senha" type="text" id="campo-senha">
+            <div class="senha-acao">
+                <input name="senha" type="text" id="campo-senha" readonly>
+                <div class="botoes-senha">
+                    <button type="button" id="botao-gerar">Gerar</button>
+                    <button type="button" id="botao-copiar" disabled>Copiar</button>
+                </div>
+            </div>
         </div>
         <div class="parametro">
             <h3 class="parametro-titulo">Personalize sua senha</h3>
             <div class="parametro-coluna__senha">
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Número de caracteres</h4>
-                </div>                
+                    <div class="parametro-senha__campo">
+                        <input type="range" id="slider-tamanho" min="6" max="24" value="12">
+                        <span id="valor-tamanho">12</span>
+                    </div>
+                </div>
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Características da senha</h4>
+                    <div class="checkboxes-senha">
+                        <label><input type="checkbox" id="checkbox-minusculas" checked> Minúsculas</label>
+                        <label><input type="checkbox" id="checkbox-maiusculas" checked> Maiúsculas</label>
+                        <label><input type="checkbox" id="checkbox-numeros" checked> Números</label>
+                        <label><input type="checkbox" id="checkbox-simbolos"> Símbolos</label>
+                    </div>
                 </div>
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Força da senha</h4>
+                    <p class="forca-senha" id="forca-senha">Selecione opções para ver a força da senha.</p>
                 </div>
             </div>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 
 </html>
